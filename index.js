@@ -1,8 +1,11 @@
 // Requiring module
+const dotenv = require('dotenv')
+dotenv.config()
 const discord = require('discord.js')
 const request = require('request')
 const fetch = require('node-fetch')
 //https://codeforces.com/api/contest.list?gym=true
+
 // Creates a discord client
 const client = new discord.Client()
 const url = "https://codeforces.com/api/contest.list"
@@ -42,11 +45,11 @@ client.on('message', (message) => {
 
                     message.channel.send(response)
 				
-					// do something with JSON, using the 'body' variable
 				}
 			})
  
 	}
 })
 
-client.login('NzgyNDk5ODU5MTE4NDI0MDc0.X8NFyA.hpHbZNJd2hVuSTrlZShz-dsOVCg')
+client.login(process.env.API_KEY)
+
