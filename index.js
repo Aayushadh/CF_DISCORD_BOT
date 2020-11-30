@@ -33,7 +33,7 @@ client.on('message', (message) => {
                        if(arr1[i].phase === "BEFORE")
                        {
                            let mydate = new Date(arr1[i].startTimeSeconds * 1000)
-                           mydate = myDate.toLocaleString() 
+                           mydate = mydate.toLocaleString() 
                            response+="Contest Name - "+arr1[i].name+'\n'
                            response += 'Timing- ' + mydate+'\n'
                            response+="Duration - "+(arr1[i].durationSeconds/3600)+" hours \n"
